@@ -7,7 +7,7 @@ import PublicRoute from "../PublicRoute";
 const NotFoundContainer = lazy(() => import('../../containers/NotFound'));
 const HomeContainer = lazy(() => import('../../containers/Home'));
 
-const Routes = ({ t }) => (
+const Routes = () => (
         <Switch>
             <PublicRoute exact path="/">
                 <Suspense fallback={<LoadingIndicator />}>
