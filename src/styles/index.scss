@@ -1,0 +1,48 @@
+@import "helper";
+
+:root {
+  --app-purple: #a532ff;
+  --app-yellow: #fadf4b;
+  --app-max-w: 1920px;
+  --app-header-height: 76px;
+};
+
+body {
+  margin: 0 auto;
+  color: $white;
+  //background-color: $black;
+  max-width: var(--app-max-w);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-layout-height {
+  margin-top: var(--app-header-height);
+}
+
+.app-orange-button {
+  padding: 10px 30px;
+  @include text-styles($text-sm, $black, 700);
+  background-color: var(--app-yellow) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.sm {
+  display: none;
+
+  @media (max-width: 991px) {
+    display: flex;
+  }
+}
+
+.md {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
+}

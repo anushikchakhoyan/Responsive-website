@@ -1,0 +1,106 @@
+@import "src/styles/helper";
+
+header {
+  .navigation {
+    padding: 0 80px;
+    background-color: $black;
+    border-bottom: 1px solid rgba($white, .25);
+
+    @media (max-width: 1440px) {
+      padding: 0 20px;
+    }
+
+    .custom-collapse {
+      flex-grow: 0;
+      flex-basis: 80% !important;
+      justify-content: space-between;
+
+      @media (max-width: 991px) {
+        flex-basis: 100% !important;
+      }
+
+      @media (min-width: 992px) and (max-width: 1440px) {
+        flex-basis: 70% !important;
+      }
+
+      .app-orange-button {
+        width: auto;
+
+        @media (max-width: 991px) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      padding: 0;
+      border: none;
+
+      & > svg {
+        font-size: 25px;
+      }
+    }
+
+    .app-logo {
+      @media (max-width: 991px) {
+        width: 150px;
+      }
+    }
+  }
+
+  .navbar-dark .navbar-nav {
+    width: 50%;
+    justify-content: space-between;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      align-items: center;
+    }
+
+    .nav-link {
+      padding: 0 40px;
+      @include text-styles($fontSize: $text-base, $color: $white, $fontWeight: 700);
+
+      &:hover {
+        color: var(--app-yellow);
+      }
+
+      @media (max-width: 991px) {
+        padding: 20px 0;
+        @include text-styles($fontSize: $text-lg, $color: $white, $fontWeight: 700);
+      }
+
+      @media (min-width: 992px) and (max-width: 1440px) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .custom-input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    background-color: $black;
+    transition: width 0.3s linear;
+    border-bottom: 1px solid $black;
+
+    &.opened {
+      width: 80%;
+      border-color: $white;
+    }
+
+    &.closed {
+      width: 0;
+    }
+
+    &::placeholder {
+      padding-left: 40px;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}

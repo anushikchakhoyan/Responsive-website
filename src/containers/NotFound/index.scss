@@ -1,0 +1,14 @@
+@import "src/styles/helper";
+
+.not-found-wrapper {
+  height: 100vh;
+
+  & > p {
+    text-align: center;
+    @include text-styles($text-2xl, $white, 700);
+
+    @media (max-width: 991px) {
+      @include text-styles($text-lg, $white, 700);
+    }
+  }
+}

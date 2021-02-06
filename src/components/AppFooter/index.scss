@@ -1,0 +1,71 @@
+@import "src/styles/helper";
+
+footer {
+  padding: 30px 80px;
+  background-color: $black;
+
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 1440px) {
+    padding: 30px 20px;
+  }
+
+  .footer-nav-list {
+    padding-top: 50px;
+
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      flex-direction: column;
+    }
+  }
+
+  .image-wrapper {
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 340px;
+    }
+  }
+
+  .footer-list {
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+
+    & > p {
+      @include text-styles($text-xl, $white, 700);
+    }
+
+    & > li {
+      list-style-type: none;
+      @include text-styles($text-base, $white, 300);
+    }
+  }
+
+  .social-icons {
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    & > p {
+      @media (max-width: 767px) {
+       padding: 20px 0;
+      }
+    }
+
+    .social-icon {
+      color: $white;
+      margin: 0 10px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--app-purple);
+      }
+    }
+  }
+}
