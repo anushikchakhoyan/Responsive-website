@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {FaSearch, AiOutlineMenu, IoMdClose} from "react-icons/all";
 import {Nav, Navbar, InputGroup, Button} from "react-bootstrap";
+import {FaSearch, AiOutlineMenu, IoMdClose} from "react-icons/all";
 
 import Logo from "../../assets/logo.png";
 import "./index.scss";
@@ -17,7 +17,8 @@ const AppHeader = () => {
             <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top"
                     className="d-flex justify-content-between py-3 navigation">
                 <Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)}>
-                    {toggleMenu ? <AiOutlineMenu className="text-white"/> : <IoMdClose className="text-white" />}
+                    {toggleMenu ? <AiOutlineMenu className="text-white"/> :
+                        <IoMdClose className="text-white"/>}
                 </Toggle>
                 <Brand href="#home" className={toggleMenu ? 'visible' : 'invisible'}>
                     <img src={Logo} alt="Fatlinker logo" className="app-logo"/>
@@ -33,13 +34,16 @@ const AppHeader = () => {
                     </Nav>
                     <Nav>
                         <InputGroup className="pl-5 md">
-                            <InputGroup.Prepend onClick={() => setToggleSearch(!toggleSearch)} className="cursor-pointer align-items-center">
+                            <InputGroup.Prepend onClick={() => setToggleSearch(!toggleSearch)}
+                                                className="cursor-pointer align-items-center">
                                 <FaSearch className="text-white"/>
                             </InputGroup.Prepend>
-                            <input type="text" className={`custom-input ${toggleSearch ? 'opened' : 'closed'}`}
+                            <input type="text"
+                                   className={`custom-input ${toggleSearch ? 'opened' : 'closed'}`}
                                    placeholder="Search"/>
                         </InputGroup>
-                        <Button variant="warning" className="font-weight-bold app-orange-button">Subscribe</Button>
+                        <Button variant="warning"
+                                className="font-weight-bold app-orange-button">Subscribe</Button>
                     </Nav>
                 </Collapse>
             </Navbar>
