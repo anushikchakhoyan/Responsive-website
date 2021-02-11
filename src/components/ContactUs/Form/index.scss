@@ -1,0 +1,28 @@
+@import "src/styles/helper";
+
+$name: "contact-form";
+
+.#{$name} {
+  @include form-styles($name);
+}
+
+.contact-info-item {
+  @media (max-width: 1200px) {
+    padding: 0;
+    text-align: center;
+  }
+
+  .link {
+    margin-left: 10px;
+    @include text-styles($text-sm, $white, 400);
+
+    &:hover {
+      @include text-styles($text-sm, $white, 400);
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: 5px;
+      @include text-styles($text-xs, $white, 400);
+    }
+  }
+}

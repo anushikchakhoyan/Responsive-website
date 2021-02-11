@@ -3,14 +3,49 @@ $black: #131317;
 
 $text-xs: 0.75rem; //12
 $text-sm: 0.875rem; //14
-$text-base: 1rem;  //16
-$text-lg: 1.125rem;  //18
-$text-xl: 1.25rem;  //20
-$text-2xl: 1.5rem;  //24
-$text-3xl: 1.875rem;  //30
+$text-base: 1rem; //16
+$text-lg: 1.125rem; //18
+$text-xl: 1.25rem; //20
+$text-2xl: 1.5rem; //24
+$text-3xl: 1.875rem; //30
 
 @mixin text-styles($fontSize: $text-xs, $color: $white, $fontWeight: 400) {
   color: $color;
   font-size: $fontSize;
   font-weight: $fontWeight;
+}
+
+@mixin form-styles($name) {
+  .#{$name}-label {
+    @include text-styles($text-sm, rgba($white, .7), 700);
+  }
+
+  .#{$name}-textarea {
+    resize: none;
+    background-color: transparent;
+    @include text-styles($text-sm, rgba($white, .65), 300);
+
+    &::placeholder {
+      @include text-styles($text-sm, rgba($white, .65), 300);
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      background-color: transparent;
+      border-color: var(--app-purple);
+      @include text-styles($text-sm, rgba($white, .65), 300);
+    }
+  }
+
+  .#{$name}-input {
+    height: 3rem;
+    @extend .#{$name}-textarea;
+  }
+
+  .app-orange-button {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
 }
