@@ -5,13 +5,25 @@ import LoadingIndicator from "../LoadingIndicator";
 import PublicRoute from "../PublicRoute";
 
 const NotFoundContainer = lazy(() => import('../../containers/NotFound'));
-const HomeContainer = lazy(() => import('../../containers/Home'));
+const Subscription = lazy(() => import('../../containers/Subscription'));
+const ContactUs = lazy(() => import('../../containers/ContactUs'));
+const Home = lazy(() => import('../../containers/Home'));
 
 const Routes = () => (
         <Switch>
             <PublicRoute exact path="/">
                 <Suspense fallback={<LoadingIndicator />}>
-                    <HomeContainer />
+                    <Home />
+                </Suspense>
+            </PublicRoute>
+            <PublicRoute exact path="/contact-us">
+                <Suspense fallback={<LoadingIndicator />}>
+                    <ContactUs />
+                </Suspense>
+            </PublicRoute>
+            <PublicRoute exact path="/subscribe">
+                <Suspense fallback={<LoadingIndicator />}>
+                    <Subscription />
                 </Suspense>
             </PublicRoute>
             <Route exact path="*">

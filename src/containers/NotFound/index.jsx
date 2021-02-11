@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.scss";
 
-const NotFoundContainer = () => (
+const NotFound = () => (
    <div className="not-found-wrapper d-flex justify-content-center align-items-center">
        <p className="mb-0">
            OOPS! Page Not Found <br />
@@ -11,4 +11,4 @@ const NotFoundContainer = () => (
    </div>
 );
 
-export default NotFoundContainer;
+export default NotFound;

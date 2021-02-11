@@ -5,7 +5,7 @@
   --app-yellow: #fadf4b;
   --app-max-w: 1920px;
   --app-header-height: 76px;
-};
+}
 
 body {
   margin: 0 auto;
@@ -22,6 +22,8 @@ body {
 }
 
 .app-orange-button {
+  border: none;
+  border-radius: 4px;
   padding: 10px 30px;
   @include text-styles($text-sm, $black, 700);
   background-color: var(--app-yellow) !important;

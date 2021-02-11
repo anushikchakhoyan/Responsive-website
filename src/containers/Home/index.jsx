@@ -1,13 +1,11 @@
 import React from "react";
 
-import SubHeader from "../../components/SubHeader";
 import Hero from "../../components/Hero";
 
-const HomeContainer = () => (
+const Home = () => (
     <>
-        <SubHeader />
         <Hero/>
     </>
 )
 
-export default HomeContainer;
+export default Home;
