@@ -61,7 +61,7 @@ header {
 
     .nav-link {
       padding: 0 40px;
-      @include text-styles($fontSize: $text-base, $color: $white, $fontWeight: 700);
+      @include text-styles($text-base, $white, 700);
 
       &:hover {
         color: var(--app-yellow);
@@ -73,7 +73,7 @@ header {
 
       @media (max-width: 991px) {
         padding: 20px 0;
-        @include text-styles($fontSize: $text-lg, $color: $white, $fontWeight: 700);
+        @include text-styles($text-lg, $white, 700);
       }
 
       @media (min-width: 992px) and (max-width: 1440px) {

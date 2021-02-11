@@ -1,6 +1,8 @@
 @import "src/styles/helper";
 
-.two-column-layout {
+$name: "two-column-layout";
+
+.#{$name} {
   justify-content: center;
   border-bottom: 1px solid rgba($white, .25);
 
@@ -11,5 +13,23 @@
 
   @media (min-width: 768px) and (max-width: 1200px){
     justify-content: space-around;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 450px;
+
+    @media (max-width: 767px) {
+      padding-bottom: 20px;
+    }
+
+    &-title {
+      @include text-styles($text-3xl, $white, 700);
+
+      @media (max-width: 992px) {
+        font-size: $text-2xl;
+        text-align: center;
+      }
+    }
   }
 }
