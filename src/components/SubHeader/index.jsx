@@ -16,7 +16,7 @@ const SubHeader = () => (
                 <Tag icon={AiOutlineSafety} text="Security"/>
                 <Tag icon={FiCloud} text="Cloud & Sales"/>
             </Col>
-            {/*<div className="opacity-layer"/>*/}
+            <div className="opacity-layer"/>
         </Row>
     </Container>
 )

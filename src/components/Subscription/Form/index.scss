@@ -1,0 +1,62 @@
+@import "src/styles/helper";
+
+$name: "subscription-form";
+
+.#{$name} {
+  max-width: 450px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 20px;
+  }
+
+  &-title {
+    @include text-styles($text-3xl, $white, 700);
+
+    @media (max-width: 992px) {
+      font-size: $text-2xl;
+      text-align: center;
+    }
+  }
+
+  &-label {
+    @include text-styles($text-sm, rgba($white, .7), 700);
+  }
+
+  &-input {
+    height: 3rem;
+    background-color: transparent;
+    @include text-styles($text-sm, rgba($white, .65), 300);
+
+    &::placeholder {
+      @include text-styles($text-sm, rgba($white, .65), 300);
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      background-color: transparent;
+      border-color: var(--app-purple);
+      @include text-styles($text-sm, rgba($white, .65), 300);
+    }
+  }
+
+  p {
+    @include text-styles($text-sm, rgba($white, .8), 300);
+
+    & > .legal-link {
+      text-decoration: underline;
+      text-decoration-color: rgba($white, .8);
+      @include text-styles($text-sm, rgba($white, .8), 800);
+
+      @media (max-width: 992px) {
+        font-size: $text-xs;
+      }
+    }
+  }
+
+  .app-orange-button {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
