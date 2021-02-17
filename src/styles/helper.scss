@@ -8,6 +8,8 @@ $text-lg: 1.125rem; //18
 $text-xl: 1.25rem; //20
 $text-2xl: 1.5rem; //24
 $text-3xl: 1.875rem; //30
+$text-5xl: 2.5rem; //50
+$text-6xl: 3.125rem; //50
 
 @mixin text-styles($fontSize: $text-xs, $color: $white, $fontWeight: 400) {
   color: $color;
