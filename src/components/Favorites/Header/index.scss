@@ -1,0 +1,28 @@
+@import "src/styles/helper";
+
+$name: "favorites";
+$min767: "(min-width: 767px)";
+
+.#{$name} {
+  position: relative;
+
+  &-title {
+    left: 5%;
+    text-align: end;
+    position: absolute;
+    @include text-styles($text-7xl, $white, 700);
+
+    @media #{$max767} {
+      position: unset;
+      max-width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      @include text-styles($text-5xl, $white, 700);
+    }
+
+    @media #{$min767} and #{$max1200} {
+      left: 0;
+      @include text-styles($text-5xl, $white, 700);
+    }
+  }
+}
