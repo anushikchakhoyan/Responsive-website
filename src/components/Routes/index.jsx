@@ -6,6 +6,7 @@ import PublicRoute from "../PublicRoute";
 
 const NotFoundContainer = lazy(() => import('../../containers/NotFound'));
 const Subscription = lazy(() => import('../../containers/Subscription'));
+const Favorites = lazy(() => import('../../containers/Favorites'));
 const ContactUs = lazy(() => import('../../containers/ContactUs'));
 const Home = lazy(() => import('../../containers/Home'));
 
@@ -14,6 +15,11 @@ const Routes = () => (
             <PublicRoute exact path="/">
                 <Suspense fallback={<LoadingIndicator />}>
                     <Home />
+                </Suspense>
+            </PublicRoute>
+            <PublicRoute path="/favorites">
+                <Suspense fallback={<LoadingIndicator />}>
+                    <Favorites />
                 </Suspense>
             </PublicRoute>
             <PublicRoute path="/contact-us">
