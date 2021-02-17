@@ -4,26 +4,26 @@ footer {
   padding: 30px 80px;
   background-color: $black;
 
-  @media (max-width: 767px) {
+  @media #{$max767} {
     padding: 30px 20px;
     text-align: center;
   }
 
-  @media (max-width: 1440px) {
+  @media #{$max1440} {
     padding: 30px 20px;
   }
 
   .footer-nav-list {
     padding-top: 50px;
 
-    @media (max-width: 767px) {
+    @media #{$max767} {
       padding-top: 30px;
       flex-direction: column;
     }
   }
 
   .image-wrapper {
-    @media (max-width: 767px) {
+    @media #{$max767} {
       margin: 0 auto;
     }
 
@@ -48,12 +48,12 @@ footer {
   }
 
   .social-icons {
-    @media (max-width: 767px) {
+    @media #{$max767} {
       flex-direction: column;
     }
 
     & > p {
-      @media (max-width: 767px) {
+      @media #{$max767} {
        padding: 20px 0;
       }
     }

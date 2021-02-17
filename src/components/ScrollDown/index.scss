@@ -1,0 +1,108 @@
+@import "src/styles/helper";
+
+$name: "scroll-down";
+
+.#{$name} {
+  @media #{$max1200} {
+    display: none;
+  }
+
+  .mouse {
+    width: 21px;
+    height: 32px;
+    margin: 0 auto 10px;
+    position: relative;
+    border-radius: 23px;
+    box-sizing: border-box;
+    border: 2px solid $white;
+
+    .line {
+      top: 0;
+      left: 8px;
+      width: 1px;
+      height: 8px;
+      display: block;
+      background: $white;
+      border-radius: 3px;
+      position: absolute;
+      -webkit-animation: mouse-animation 2.5s linear infinite;
+      -moz-animation: mouse-animation 2.5s linear infinite;
+      animation: mouse-animation 2.5s linear infinite;
+    }
+  }
+
+  &-text {
+    @include text-styles($text-xs, $white, 400);
+  }
+
+  & > *:hover,
+  & > *:focus,
+  & > *.active {
+    color: $white;
+  }
+
+  & > *:hover,
+  & > *:focus,
+  & > *:active,
+  & > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
+}
+
+@-webkit-keyframes mouse-animation {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@-moz-keyframes mouse-animation {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@keyframes mouse-animation {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}

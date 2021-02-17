@@ -1,12 +1,16 @@
 @import "src/styles/helper";
 
 $name: "hero-layout";
-$max767: "(max-width: 767px)";
-$max992: "(max-width: 992px)";
 
 .#{$name} {
+  padding: 0 80px;
+
   @media #{$max767} {
     flex-direction: column-reverse;
+  }
+
+  @media #{$max1440} {
+    padding: 0 20px;
   }
 
   &-content {
@@ -19,7 +23,7 @@ $max992: "(max-width: 992px)";
     &-title {
       @include text-styles($text-6xl, $white, 700);
 
-      @media (min-width: 768px) and #{$max992} {
+      @media (min-width: 768px) and #{$max1200} {
         font-size: $text-2xl;
       }
 
@@ -64,5 +68,13 @@ $max992: "(max-width: 992px)";
     @media #{$max767} {
       margin: 40px 0;
     }
+  }
+}
+
+.#{$name}-wrapper {
+  min-height: calc(100vh - var(--app-header-height) - var(--app-subheader-height));
+
+  @media #{$max992} {
+    min-height: auto;
   }
 }

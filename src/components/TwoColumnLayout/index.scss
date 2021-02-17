@@ -1,8 +1,6 @@
 @import "src/styles/helper";
 
 $name: "two-column-layout";
-$max767: "(max-width: 767px)";
-$max992: "(max-width: 992px)";
 
 .#{$name} {
   justify-content: center;
