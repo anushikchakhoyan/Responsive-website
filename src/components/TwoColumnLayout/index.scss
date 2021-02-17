@@ -1,12 +1,14 @@
 @import "src/styles/helper";
 
 $name: "two-column-layout";
+$max767: "(max-width: 767px)";
+$max992: "(max-width: 992px)";
 
 .#{$name} {
   justify-content: center;
   border-bottom: 1px solid rgba($white, .25);
 
-  @media (max-width: 767px) {
+  @media #{$max767} {
     justify-content: space-around;
     flex-direction: column-reverse;
   }
@@ -19,14 +21,14 @@ $name: "two-column-layout";
     width: 100%;
     max-width: 450px;
 
-    @media (max-width: 767px) {
+    @media #{$max767} {
       padding-bottom: 20px;
     }
 
     &-title {
       @include text-styles($text-3xl, $white, 700);
 
-      @media (max-width: 992px) {
+      @media #{$max992} {
         font-size: $text-2xl;
         text-align: center;
       }

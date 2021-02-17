@@ -16,12 +16,12 @@ const Routes = () => (
                     <Home />
                 </Suspense>
             </PublicRoute>
-            <PublicRoute exact path="/contact-us">
+            <PublicRoute path="/contact-us">
                 <Suspense fallback={<LoadingIndicator />}>
                     <ContactUs />
                 </Suspense>
             </PublicRoute>
-            <PublicRoute exact path="/subscribe">
+            <PublicRoute path="/subscribe">
                 <Suspense fallback={<LoadingIndicator />}>
                     <Subscription />
                 </Suspense>

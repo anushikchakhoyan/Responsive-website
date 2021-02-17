@@ -1,0 +1,68 @@
+@import "src/styles/helper";
+
+$name: "hero-layout";
+$max767: "(max-width: 767px)";
+$max992: "(max-width: 992px)";
+
+.#{$name} {
+  @media #{$max767} {
+    flex-direction: column-reverse;
+  }
+
+  &-content {
+    width: 100%;
+
+    @media #{$max767} {
+      padding-bottom: 20px;
+    }
+
+    &-title {
+      @include text-styles($text-6xl, $white, 700);
+
+      @media (min-width: 768px) and #{$max992} {
+        font-size: $text-2xl;
+      }
+
+      @media #{$max767} {
+        font-size: $text-5xl;
+        text-align: center;
+      }
+
+      & > .text-purple {
+        color: var(--app-purple);
+      }
+    }
+
+    &-desc {
+      @include text-styles($text-base, $white, 500);
+
+      @media #{$max767} {
+        font-size: $text-sm;
+        text-align: center;
+      }
+    }
+
+    .subscribe-in-hero {
+      max-width: 600px;
+
+      h2 {
+        @include text-styles($text-3xl, $white, 700);
+
+        @media (min-width: 768px) and #{$max992} {
+          font-size: $text-xl;
+        }
+
+        @media #{$max767} {
+          font-size: $text-2xl;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-image-wrapper {
+    @media #{$max767} {
+      margin: 40px 0;
+    }
+  }
+}
