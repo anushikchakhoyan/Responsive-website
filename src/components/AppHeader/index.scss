@@ -1,5 +1,8 @@
 @import "src/styles/helper";
 
+$max991: "(max-width: 991px)";
+$min992: "(min-width: 992px)";
+
 header {
   .navigation {
     padding: 0 80px;
@@ -8,7 +11,7 @@ header {
     max-width: var(--app-max-w);
     border-bottom: 1px solid rgba($white, .25);
 
-    @media (max-width: 1440px) {
+    @media #{$max1440} {
       padding: 0 20px;
     }
 
@@ -17,18 +20,18 @@ header {
       flex-basis: 80% !important;
       justify-content: space-between;
 
-      @media (max-width: 991px) {
+      @media #{$max991} {
         flex-basis: 100% !important;
       }
 
-      @media (min-width: 992px) and (max-width: 1440px) {
+      @media #{$min992} and #{$max1440}  {
         flex-basis: 70% !important;
       }
 
       .app-orange-button {
         width: auto;
 
-        @media (max-width: 991px) {
+         @media #{$max991} {
           margin-top: 40px;
         }
       }
@@ -44,7 +47,7 @@ header {
     }
 
     .app-logo {
-      @media (max-width: 991px) {
+       @media #{$max991} {
         width: 150px;
       }
     }
@@ -54,7 +57,7 @@ header {
     width: 50%;
     justify-content: space-between;
 
-    @media (max-width: 991px) {
+     @media #{$max991} {
       width: 100%;
       align-items: center;
     }
@@ -71,12 +74,12 @@ header {
         color: var(--app-yellow);
       }
 
-      @media (max-width: 991px) {
+       @media #{$max991} {
         padding: 20px 0;
         @include text-styles($text-lg, $white, 700);
       }
 
-      @media (min-width: 992px) and (max-width: 1440px) {
+      @media #{$min992} and #{$max1440}  {
         padding: 0 10px;
       }
     }

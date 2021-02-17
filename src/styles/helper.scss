@@ -11,6 +11,11 @@ $text-3xl: 1.875rem; //30
 $text-5xl: 2.5rem; //50
 $text-6xl: 3.125rem; //50
 
+$max767: "(max-width: 767px)";
+$max992: "(max-width: 992px)";
+$max1200: "(max-width: 1200px)";
+$max1440: "(max-width: 1440px)";
+
 @mixin text-styles($fontSize: $text-xs, $color: $white, $fontWeight: 400) {
   color: $color;
   font-size: $fontSize;
