@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {Button, Col, Image} from "react-bootstrap";
 import {FiShoppingBag, GrFavorite} from "react-icons/all";
 
@@ -23,11 +24,23 @@ const ProductItem = ({price, newPrice, title, desc, discount, isFavorite, isLimi
             {!discount ? (
                 <span className="price">${price}</span>
             ) : (
-                <div className="d-flex align-items-center"><span className="price old">${price}</span><span className="price new">${newPrice}</span></div>
+                <div className="d-flex align-items-center"><span className="price old">${price}</span><span
+                    className="price new">${newPrice}</span></div>
             )}
         </div>
         <Button variant="light" className="check-btn"><FiShoppingBag className="mr-1"/>Check Now</Button>
     </Col>
 )
+
+ProductItem.propTypes = {
+    desc: PropTypes.string,
+    price: PropTypes.number,
+    title: PropTypes.string,
+    isLimited: PropTypes.bool,
+    discount: PropTypes.number,
+    isFavorite: PropTypes.bool,
+    newPrice: PropTypes.number,
+    attachment: PropTypes.string
+};
 
 export default ProductItem;

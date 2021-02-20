@@ -1,20 +1,18 @@
 import React from "react";
 import {Container} from "react-bootstrap";
 
-import FavoritesHeader from "../../components/Favorites/Header";
 import ProductsListHeader from "../../components/Products/Header";
 import Products from "../../components/Products";
 
-const Favorites = () => (
+const ProductsContainer = () => (
     <>
-        <FavoritesHeader/>
         <section className="bg-white py-5">
             <Container>
-                <ProductsListHeader title="Links you have saved"/>
+                <ProductsListHeader />
                 <Products />
             </Container>
         </section>
     </>
 )
 
-export default Favorites;
+export default ProductsContainer;

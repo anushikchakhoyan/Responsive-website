@@ -48,17 +48,3 @@ body {
     display: flex;
   }
 }
-
-.products-list {
-  @media #{$max580} {
-    justify-content: center;
-  }
-
-  & > .title {
-    @include text-styles($text-5xl, $black, 700);
-
-    @media #{$max767} {
-      @include text-styles($text-2xl, $black, 700);
-    }
-  }
-}
