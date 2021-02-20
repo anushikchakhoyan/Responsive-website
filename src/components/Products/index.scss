@@ -1,0 +1,130 @@
+@import "src/styles/helper";
+
+$name: "product-item";
+
+.product-wrapper {
+  .#{$name} {
+    overflow: hidden;
+    position: relative;
+    border-radius: 17px;
+
+    .info-wrapper {
+      bottom: 0;
+      padding: 10px;
+      height: 50%;
+      color: $white;
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(to top, rgba(6, 22, 34, 0.71) 0%, rgba(44, 59, 69, 0) 88.92%);
+
+      & > .title {
+        @include text-styles($text-lg, $white, 700);
+
+        @media #{$max767} {
+          @include text-styles($text-base, $white, 700);
+        }
+      }
+
+      & > .desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-height: 24px;
+        -webkit-box-orient: vertical;
+        @include text-styles($text-base, $white, 300);
+      }
+    }
+  }
+
+  .check-btn {
+    width: 100%;
+    margin: 10px 0;
+    min-height: 48px;
+    border-radius: 10px;
+    border: 2px solid $black;
+    @include text-styles($text-base, $black, 700);
+
+    &:hover {
+      background: $black;
+      @include text-styles($text-base, $white, 700);
+    }
+
+    @media #{$max767} {
+      @include text-styles($text-sm, $black, 700);
+    }
+  }
+
+  .discount {
+    top: 30px;
+    padding: 10px;
+    position: absolute;
+    background-color: $black;
+    text-transform: uppercase;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    @include text-styles($text-lg, $white, 700);
+
+    @media #{$max767} {
+      @include text-styles($text-base, $white, 700);
+    }
+  }
+
+  .favorite-icon {
+    top: 20px;
+    z-index: 10;
+    right: 20px;
+    position: absolute;
+
+    &.red {
+      & > svg > path {
+        fill: $red;
+        stroke: $red;
+      }
+    }
+  }
+
+  .price {
+    &.old{
+      padding-right: 5px;
+      text-decoration: line-through;
+      @include text-styles($text-sm, $black, 600);
+    }
+
+    &.new {
+      @include text-styles($text-3xl, $red, 700);
+
+      @media #{$max767} {
+        @include text-styles($text-xl, $red, 700);
+      }
+    }
+  }
+
+  .time {
+    border-radius: 7px;
+    padding: 5px 10px;
+    @include text-styles($text-xs, $white, 700);
+  }
+
+  .limited {
+    .save-money {
+      @include text-styles($text-xs, $green, 700)
+    }
+
+    .time {
+      background-color: $green;
+    }
+  }
+
+  .permanent {
+    .save-money {
+      @include text-styles($text-xs, $red, 700)
+    }
+
+    .time {
+      background-color: $red;
+    }
+  }
+}
+

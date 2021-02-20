@@ -1,4 +1,4 @@
-@import "src/styles/helper";
+@import "../../styles/helper";
 
 $name: "contact-form";
 
@@ -7,6 +7,7 @@ $name: "contact-form";
 }
 
 .contact-info-item {
+  color: $white;
   @media (max-width: 1200px) {
     padding: 0;
     text-align: center;
