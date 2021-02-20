@@ -10,7 +10,6 @@
 
 body {
   margin: 0 auto;
-  color: $white;
   background-color: $black;
   max-width: var(--app-max-w);
   font-family: 'Poppins', sans-serif;
@@ -47,5 +46,19 @@ body {
 
   @media (min-width: 992px) {
     display: flex;
+  }
+}
+
+.products-list {
+  @media #{$max580} {
+    justify-content: center;
+  }
+
+  & > .title {
+    @include text-styles($text-5xl, $black, 700);
+
+    @media #{$max767} {
+      @include text-styles($text-2xl, $black, 700);
+    }
   }
 }

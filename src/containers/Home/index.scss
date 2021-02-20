@@ -1,0 +1,21 @@
+@import "src/styles/helper";
+
+$name: "products-list";
+
+.#{$name} {
+  justify-content: space-between;
+
+  @media #{$max580} {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & > .link {
+    color: $black;
+
+     & > span {
+       text-transform: uppercase;
+       @include text-styles($text-xl, $black, 700)
+     }
+  }
+}

@@ -3,6 +3,8 @@
 $name: "scroll-down";
 
 .#{$name} {
+  width: 100%;
+
   @media #{$max1200} {
     display: none;
   }

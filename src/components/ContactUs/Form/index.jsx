@@ -2,7 +2,7 @@ import React from "react";
 import {Form} from "react-bootstrap";
 
 import ContactUsInfo from "../Info";
-import "./index.scss";
+import "../index.scss";
 
 const {Group,Control,Label} = Form;
 
