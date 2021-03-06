@@ -25,6 +25,10 @@ $name: "product-item";
       text-transform: uppercase;
       @include text-styles($text-xl, $black, 700)
     }
+
+    .link-icon {
+      font-size: $text-4xl;
+    }
   }
 }
 

@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import {map} from "lodash-es";
-import {Row} from "react-bootstrap";
 
+import {map} from "lodash-es";
+import {Container, Row} from "react-bootstrap";
+
+import ProductsListHeader from "./Header";
 import ProductItem from "./Item";
 import "./index.scss";
 
@@ -72,11 +74,16 @@ const Products = () => {
     )
 
     return (
-        <Row className="py-4 px-0">
-            {map(items, (item, index) => (
-                <ProductItem {...item} key={index}/>
-            ))}
-        </Row>
+        <section className="bg-white py-5">
+            <Container>
+                <ProductsListHeader title="Recently viewed & more" to="/view-all"/>
+                <Row className="py-4 px-0">
+                    {map(items, (item, index) => (
+                        <ProductItem {...item} key={index}/>
+                    ))}
+                </Row>
+            </Container>
+        </section>
     )
 }
 

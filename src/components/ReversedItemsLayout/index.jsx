@@ -1,5 +1,6 @@
 import React from "react";
 import {map} from "lodash-es";
+import PropTypes from "prop-types";
 import {FiCheckCircle} from "react-icons/all";
 import {Col, Image, Row} from "react-bootstrap";
 
@@ -21,5 +22,11 @@ const ReversedItemsLayout = ({attachment, title, items}) => (
         </Col>
     </Row>
 )
+
+ReversedItemsLayout.propTypes = {
+    items: PropTypes.array,
+    title: PropTypes.string,
+    attachment: PropTypes.string
+};
 
 export default ReversedItemsLayout;

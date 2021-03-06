@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
+
 import {map} from "lodash-es";
-import {Container} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import {Container, Row} from "react-bootstrap";
+import {BsArrowRight} from "react-icons/all";
 
 import HowItWorksImage from "../../assets/how-it-works.png";
 import ReversedItemsLayout from "../ReversedItemsLayout";
@@ -8,7 +11,7 @@ import WhoWeAreImage from "../../assets/who-we-are.png";
 import "./index.scss";
 
 const WhoWeAre = () => {
-    const data = [
+    const [data] = useState( [
         {
             number: "01",
             isReversed: false,
@@ -49,7 +52,7 @@ const WhoWeAre = () => {
                 }
             ]
         }
-    ]
+    ])
 
     return (
         <div className="about py-5">
@@ -59,6 +62,13 @@ const WhoWeAre = () => {
                     <div className="stroke-text">{item.number}</div>
                 </Container>
             ))}
+            <Row className="flex-column justify-content-center align-items-center pt-5 start-exploring">
+                <p>Start exploring now!</p>
+                <Link to="/" className="d-flex align-items-center">
+                    <BsArrowRight className="mr-2 start-exploring-icon"/>
+                    <span className="start-exploring-link">Browse all deals</span>
+                </Link>
+            </Row>
         </div>
     )
 }

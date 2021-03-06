@@ -94,6 +94,25 @@ $name: "about";
       }
     }
   }
+
+  .start-exploring {
+    & > p {
+      @include text-styles($text-3xl, $white, 700);
+    }
+
+    & > a:hover {
+      text-decoration-color: var(--app-purple);
+    }
+
+    &-icon {
+      color: $white;
+      font-size: $text-4xl;
+    }
+
+    &-link {
+      @include text-styles($text-xl, var(--app-purple), 600);
+    }
+  }
 }
 
 @media (min-width: 768px) {
