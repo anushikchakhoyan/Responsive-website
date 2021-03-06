@@ -3,6 +3,7 @@ import {Container} from "react-bootstrap";
 
 import ProductsListHeader from "../../components/Products/Header";
 import Products from "../../components/Products";
+import WhoWeAre from "../../components/WhoWeAre";
 import Hero from "../../components/Hero";
 
 const Home = () => (
@@ -14,6 +15,7 @@ const Home = () => (
                 <Products />
             </Container>
         </section>
+        <WhoWeAre />
     </>
 )
 
