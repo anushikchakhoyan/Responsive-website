@@ -1,0 +1,103 @@
+@import "src/styles/helper";
+
+$name: "about";
+
+.#{$name} {
+  overflow-x: hidden;
+
+  &-wrapper {
+    @media #{$max767} {
+      flex-direction: column;
+    }
+  }
+
+  h2 {
+    padding-bottom: 40px;
+    @include text-styles($text-7xl, $white, 700);
+
+    @media #{$max767} {
+      text-align: center;
+      @include text-styles($text-3xl, $white, 700);
+    }
+
+    @media (min-width: 767px) and (max-width: 992px) {
+      @include text-styles($text-3xl, $white, 700);
+    }
+  }
+
+  .list-item {
+    & > p {
+      @include text-styles($text-lg, $white, 400);
+      @media #{$max767} {
+        @include text-styles($text-base, $white, 400);
+      }
+
+      @media (min-width: 767px) and (max-width: 992px) {
+        @include text-styles($text-base, $white, 400);
+      }
+    }
+
+    &-icon {
+      color: var(--app-purple);
+      font-size: $text-xl;
+    }
+  }
+
+  .stroke-text {
+    font-size: 260px;
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: $black;
+    -webkit-text-stroke-color: white;
+  }
+
+  .container {
+    &.none-reversed {
+      position: relative;
+
+      .stroke-text {
+        top: 20%;
+        left: -450px;
+        position: absolute;
+
+        @media #{$max767} {
+          top: -15px;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          font-size: 90px;
+          text-align: center;
+        }
+      }
+    }
+
+    &.reversed {
+      position: relative;
+
+      .about-wrapper {
+        flex-direction: row-reverse;
+      }
+
+      .stroke-text {
+        top: 0;
+        right: -450px;
+        position: absolute;
+
+        @media #{$max767} {
+          top: -15px;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          font-size: 90px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about.container {
+    max-width: 900px;
+  }
+}

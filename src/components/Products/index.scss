@@ -46,6 +46,10 @@ $name: "product-item";
       background: linear-gradient(to top, rgba(6, 22, 34, 0.71) 0%, rgba(44, 59, 69, 0) 88.92%);
 
       & > .title {
+        max-width: 320px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         @include text-styles($text-lg, $white, 700);
 
         @media #{$max767} {
