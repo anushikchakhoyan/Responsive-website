@@ -1,5 +1,6 @@
 @import "src/styles/helper";
 
+$grey: #81818E;
 $max991: "(max-width: 991px)";
 $min992: "(min-width: 992px)";
 
@@ -85,12 +86,7 @@ header {
     }
   }
 
-  .custom-input {
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-    background-color: $black;
+  .input-group {
     transition: width 0.3s linear;
     border-bottom: 1px solid $black;
 
@@ -99,17 +95,29 @@ header {
       border-color: $white;
     }
 
-    &.closed {
+    &.closed .custom-input {
       width: 0;
     }
+  }
+
+  .custom-input {
+    width: 100%;
+    border: none;
+    padding: 0 15px;
+    background-color: $black;
+    @include text-styles($text-sm, $white, 400);
 
     &::placeholder {
-      padding-left: 40px;
+      @include text-styles($text-sm, $grey, 400);
     }
 
     &:focus,
     &:active {
       outline: none;
     }
+  }
+
+  .search-icon {
+    font-size: $text-xl;
   }
 }

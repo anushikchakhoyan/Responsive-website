@@ -110,13 +110,6 @@ $name: "product-item";
     z-index: 10;
     right: 20px;
     position: absolute;
-
-    &.red {
-      & > svg > path {
-        fill: $red;
-        stroke: $red;
-      }
-    }
   }
 
   .price {

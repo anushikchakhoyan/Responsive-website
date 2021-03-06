@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import {Nav, Navbar, InputGroup} from "react-bootstrap";
-import {FaSearch, AiOutlineMenu, IoMdClose} from "react-icons/all";
+import {FiSearch, AiOutlineMenu, IoMdClose} from "react-icons/all";
 
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.svg";
 import "./index.scss";
 
 const {Brand, Collapse, Toggle} = Navbar;
@@ -25,7 +25,7 @@ const AppHeader = () => {
                     <img src={Logo} alt="Fatlinker logo" className="app-logo"/>
                 </Brand>
                 <div className={`sm ${toggleMenu ? 'visible' : 'invisible'}`}>
-                    <FaSearch className="text-white"/>
+                    <FiSearch className="search-icon text-white"/>
                 </div>
                 <Collapse id="responsive-navbar-nav" className="custom-collapse">
                     <Nav>
@@ -34,14 +34,12 @@ const AppHeader = () => {
                         <Link as={NavLink} to="/contact-us" activeClassName="active">Contact</Link>
                     </Nav>
                     <Nav>
-                        <InputGroup className="pl-5 md">
+                        <InputGroup className={`ml-5 md ${toggleSearch ? 'opened' : 'closed'}`}>
                             <InputGroup.Prepend onClick={() => setToggleSearch(!toggleSearch)}
                                                 className="cursor-pointer align-items-center">
-                                <FaSearch className="text-white"/>
+                                <FiSearch className="search-icon text-white"/>
                             </InputGroup.Prepend>
-                            <input type="text"
-                                   className={`custom-input ${toggleSearch ? 'opened' : 'closed'}`}
-                                   placeholder="Search"/>
+                            <input type="text" className="custom-input" placeholder="Search"/>
                         </InputGroup>
                         <Link as={NavLink} to="/subscribe">
                             <button className="font-weight-bold app-orange-button">Subscribe</button>

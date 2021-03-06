@@ -38,6 +38,7 @@ body {
 
   @media (max-width: 991px) {
     display: flex;
+    flex-wrap: nowrap;
   }
 }
 
@@ -46,5 +47,6 @@ body {
 
   @media (min-width: 992px) {
     display: flex;
+    flex-wrap: nowrap;
   }
 }
