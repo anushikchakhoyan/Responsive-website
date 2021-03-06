@@ -47,7 +47,7 @@ $name: "hero-layout";
     }
 
     .subscribe-in-hero {
-      max-width: 600px;
+      max-width: 450px;
 
       h2 {
         @include text-styles($text-3xl, $white, 700);
@@ -76,5 +76,9 @@ $name: "hero-layout";
 
   @media #{$max992} {
     min-height: auto;
+  }
+
+  @media #{$max1440} {
+    padding: 20px 0 !important;
   }
 }

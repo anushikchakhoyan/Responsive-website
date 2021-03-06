@@ -4,7 +4,7 @@ import {Col, Row, Image, Container} from "react-bootstrap";
 import SocialIcons from "../SocialIcons";
 
 import footerImage from "../../assets/footer.png";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.svg";
 import Nav from "./Nav";
 import "./index.scss";
 
@@ -17,7 +17,7 @@ const AppFooter = () => {
                         <Image src={Logo} fluid alt="Fatlinker logo"/>
                         <Nav />
                         <div className="d-flex justify-content-between align-items-center py-3 social-icons">
-                            <p className="mb-0">Strong point @2021</p>
+                            <p className="mb-0">Strong point ©2021</p>
                             <SocialIcons />
                         </div>
                     </Col>
