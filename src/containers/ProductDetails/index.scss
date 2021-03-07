@@ -1,0 +1,182 @@
+@import "src/styles/helper";
+
+$smoke-white: #F5FAFE;
+$pale-grey: #CFD6DB;
+$name: "product-detail";
+
+.#{$name} {
+  .product-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 17px;
+
+    img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+    }
+
+    .discount {
+      top: 30px;
+      padding: 10px;
+      position: absolute;
+      background-color: $black;
+      text-transform: uppercase;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      @include text-styles($text-lg, $white, 700);
+
+      @media #{$max767} {
+        @include text-styles($text-base, $white, 700);
+      }
+    }
+  }
+
+  .list-item-title {
+    @include text-styles($text-3xl, $black, 700);
+
+    @media #{$max767} {
+      @include text-styles($text-xl, $black, 700);
+    }
+  }
+
+  .list-item {
+    @include list-item($black);
+  }
+
+  &-title {
+    max-width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include text-styles($text-5xl, $black, 700);
+
+    @media #{$max767} {
+      @include text-styles($text-3xl, $black, 700);
+    }
+  }
+
+  &-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    line-height: 24px;
+    -webkit-box-orient: vertical;
+    @include text-styles($text-xl, $black, 300);
+  }
+
+  .price {
+    &.old {
+      padding-right: 5px;
+      text-decoration: line-through;
+      @include text-styles($text-sm, $black, 600);
+    }
+
+    &.new {
+      @include text-styles($text-3xl, $red, 700);
+
+      @media #{$max767} {
+        @include text-styles($text-xl, $red, 700);
+      }
+    }
+  }
+
+  .time {
+    border-radius: 7px;
+    padding: 5px 10px;
+    @include text-styles($text-xs, $white, 700);
+  }
+
+  .limited {
+    .save-money {
+      @include text-styles($text-xs, $green, 700)
+    }
+
+    .time {
+      background-color: $green;
+    }
+  }
+
+  .permanent {
+    .save-money {
+      @include text-styles($text-xs, $red, 700)
+    }
+
+    .time {
+      background-color: $red;
+    }
+  }
+
+  .stepper {
+    &-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--app-purple);
+
+      @include text-styles($text-xl, $white, 700);
+    }
+
+    &-line {
+      width: 1px;
+      height: 40px;
+      margin-left: 20px;
+      color: var(--app-purple);
+      background-color: var(--app-purple);
+    }
+
+    &-text {
+      @include text-styles($text-xl, $black, 300);
+    }
+  }
+
+  .notification {
+    max-width: 600px;
+    border-radius: 12px;
+    background: $smoke-white;
+    border: 1px solid $pale-grey;
+    justify-content: space-between;
+
+    @media #{$max992} {
+      justify-content: start;
+      flex-direction: column;
+    }
+
+    &-text {
+      padding: 0 10px;
+      max-width: 250px;
+      @include text-styles($text-base, $black, 300);
+
+      @media #{$max992} {
+        max-width: 100%;
+      }
+    }
+
+    .users-icon {
+      font-size: $text-3xl;
+    }
+
+    .link-icon {
+      font-size: $text-4xl;
+    }
+
+    &-button {
+      border-radius: 6px;
+      padding: 3px 25px;
+      background-color: var(--app-yellow);
+      @include text-styles($text-base, $black, 600);
+
+      @media #{$max992} {
+        width: 100%;
+        margin-top: 30px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .product-detail.container {
+    max-width: 900px;
+  }
+}

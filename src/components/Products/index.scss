@@ -70,6 +70,12 @@ $name: "product-item";
         @include text-styles($text-base, $white, 300);
       }
     }
+
+    img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+    }
   }
 
   .check-btn {

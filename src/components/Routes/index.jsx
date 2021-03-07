@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoadingIndicator from "../LoadingIndicator";
 import PublicRoute from "../PublicRoute";
 
+const ProductDetailsContainer = lazy(() => import('../../containers/ProductDetails'));
 const NotFoundContainer = lazy(() => import('../../containers/NotFound'));
 const ProductsContainer = lazy(() => import('../../containers/Products'));
 const Subscription = lazy(() => import('../../containers/Subscription'));
@@ -18,9 +19,14 @@ const Routes = () => (
                     <Home />
                 </Suspense>
             </PublicRoute>
-            <PublicRoute path="/products">
+            <PublicRoute exact path="/products">
                 <Suspense fallback={<LoadingIndicator />}>
                     <ProductsContainer />
+                </Suspense>
+            </PublicRoute>
+            <PublicRoute exact path="/products/:id">
+                <Suspense fallback={<LoadingIndicator />}>
+                    <ProductDetailsContainer />
                 </Suspense>
             </PublicRoute>
             <PublicRoute path="/favorites">
