@@ -61,3 +61,22 @@ $max1440: "(max-width: 1440px)";
     }
   }
 }
+
+
+@mixin list-item($color: $white) {
+  & > p {
+    @include text-styles($text-lg, $color, 400);
+    @media #{$max767} {
+      @include text-styles($text-base, $color, 400);
+    }
+
+    @media (min-width: 767px) and (max-width: 992px) {
+      @include text-styles($text-base, $color, 400);
+    }
+  }
+
+  &-icon {
+    color: var(--app-purple);
+    font-size: $text-xl;
+  }
+}
