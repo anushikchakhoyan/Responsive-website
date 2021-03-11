@@ -32,21 +32,3 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
-
-.sm {
-  display: none;
-
-  @media (max-width: 991px) {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-
-.md {
-  display: none;
-
-  @media (min-width: 992px) {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
