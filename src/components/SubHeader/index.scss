@@ -14,7 +14,7 @@
     padding: 5px 30px;
     margin-right: 20px;
     border-radius: 50px;
-    background-color: unset;
+    background-color: $black;
     border: 1px solid $white;
 
     @include text-styles($text-base, $white, 400);
@@ -23,6 +23,7 @@
     &.selected {
       color: $black;
       background-color: $white;
+      border: 1px solid $black;
     }
 
     & > span {
@@ -32,7 +33,7 @@
 }
 
 .opacity-layer {
-  @media (max-width: 767px) {
+  @media #{$max1200} {
     right: 0;
     width: 60px;
     z-index: 1;

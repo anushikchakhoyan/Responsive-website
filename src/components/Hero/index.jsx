@@ -7,7 +7,7 @@ import ScrollDown from "../ScrollDown";
 import './index.scss';
 
 const Hero = () => (
-    <Container fluid className="hero-layout-wrapper d-flex justify-content-between flex-column p-0">
+    <Container fluid className="hero-layout-wrapper d-flex justify-content-around flex-column p-0">
         <Row className="align-items-center justify-content-between mx-auto hero-layout">
             <Col xs={12} md={6} lg={5} className="d-flex justify-content-center p-0">
                 <div className="hero-layout-content">
@@ -15,7 +15,8 @@ const Hero = () => (
                         <h1 className="hero-layout-content-title">Get new <span
                             className="text-purple">deals instantly!</span></h1>
                         <p className="hero-layout-content-desc">
-                            StrongPointer is a free online magazine featuring discount links. You can use our links to
+                            StrongPointer is a free online magazine featuring discount links. You can use our links
+                            to
                             save money on buying your favorite software, online services and more.
                         </p>
                     </>

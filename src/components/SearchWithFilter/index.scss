@@ -1,0 +1,62 @@
+@import "src/styles/helper";
+
+$bg-color: #f9f9f9;
+
+.prepend-input {
+  padding: 0 0 0 20px;
+  border: 1px solid #ced4da;
+  background-color: $bg-color;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  border-right: none;
+
+  & > svg {
+    font-size: 20px;
+  }
+}
+
+.append-input {
+  padding: 0 0 0 20px;
+  border: 1px solid #ced4da;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border-left: none;
+
+  & > svg {
+    font-size: 20px;
+  }
+
+  .filter-item {
+    padding: 3px 15px;
+    margin: 2px;
+    @include text-styles($text-base, $grey, 400);
+
+    &.selected{
+      color: $white;
+      border-radius: 50px;
+      background-color: $black;
+
+      @include text-styles($text-base, $white, 700);
+    }
+  }
+}
+
+.custom-input {
+  background-color: $bg-color;
+
+  &::placeholder {
+    @include text-styles($text-sm, $grey, 400);
+  }
+
+  &.form-control {
+    height: 50px !important;
+    border-left: none;
+    border-radius: 50px;
+    @include text-styles($text-sm, $grey, 400);
+
+    &:focus {
+      border: 1px solid #ced4da;
+      border-left: none;
+    }
+  }
+}
