@@ -11,6 +11,7 @@ const Products = () => {
     const [items] = useState(
         [
             {
+                id: 1,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",
@@ -21,6 +22,7 @@ const Products = () => {
                 isFavorite: true
             },
             {
+                id: 2,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",
@@ -31,6 +33,7 @@ const Products = () => {
                 isFavorite: false
             },
             {
+                id: 3,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",
@@ -41,6 +44,7 @@ const Products = () => {
                 isFavorite: false
             },
             {
+                id: 4,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",
@@ -51,6 +55,7 @@ const Products = () => {
                 isFavorite: false
             },
             {
+                id: 5,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",
@@ -61,6 +66,7 @@ const Products = () => {
                 isFavorite: false
             },
             {
+                id: 6,
                 title: 'Adidas sport',
                 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 attachment: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c980ea1ef3f344159dcdac3700723bf3_9366/Run_60s_2.0_Shoes_Black_FZ0958_04_standard.jpg",

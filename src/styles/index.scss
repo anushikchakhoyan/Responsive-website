@@ -32,3 +32,9 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+input:focus,
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+ }

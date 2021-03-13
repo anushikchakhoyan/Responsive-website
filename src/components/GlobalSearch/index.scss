@@ -1,14 +1,14 @@
 @import "src/styles/helper";
 
-$grey: #81818E;
 $min992: "(min-width: 992px)";
+$max991: "(max-width: 991px)";
 $min1440: "(min-width: 1440px)";
 $max1600: "(max-width: 1600px)";
 
 .search-wrapper {
   border-bottom: 1px solid $white;
 
-  @media #{$max1200} {
+  @media #{$max991} {
     display: none;
   }
 
@@ -29,11 +29,6 @@ $max1600: "(max-width: 1600px)";
 
     &::placeholder {
       @include text-styles($text-sm, $grey, 400);
-    }
-
-    &:focus,
-    &:active {
-      outline: none;
     }
   }
 

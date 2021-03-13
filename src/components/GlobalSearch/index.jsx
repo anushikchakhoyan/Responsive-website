@@ -7,7 +7,7 @@ const { Prepend } = InputGroup;
 
 const GlobalSearch = () => (
     <InputGroup className="ml-5 mr-3 search-wrapper">
-        <Prepend className="cursor-pointer align-items-center">
+        <Prepend className="align-items-center">
             <FiSearch className="search-icon text-white"/>
         </Prepend>
         <input type="text" className="custom-input" placeholder="Search"/>
