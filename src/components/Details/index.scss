@@ -107,26 +107,34 @@ $name: "product-detail";
     }
   }
 
-  .stepper {
-    &-number {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: var(--app-purple);
+  .stepper-wrapper {
+    width: 700px;
 
-      @include text-styles($text-xl, $white, 700);
+    @media #{$max1440} {
+      width: auto;
     }
 
-    &-line {
-      width: 1px;
-      height: 40px;
-      margin-left: 20px;
-      color: var(--app-purple);
-      background-color: var(--app-purple);
-    }
+    .stepper {
+      &-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--app-purple);
 
-    &-text {
-      @include text-styles($text-xl, $black, 300);
+        @include text-styles($text-xl, $white, 700);
+      }
+
+      &-line {
+        width: 1px;
+        height: 40px;
+        margin-left: 20px;
+        color: var(--app-purple);
+        background-color: var(--app-purple);
+      }
+
+      &-text {
+        @include text-styles($text-xl, $black, 300);
+      }
     }
   }
 
