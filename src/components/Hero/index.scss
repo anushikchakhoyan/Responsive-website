@@ -3,7 +3,7 @@
 $name: "hero-layout";
 
 .#{$name} {
-  padding: 0 80px;
+  padding: 30px 80px 0 80px;
 
   @media #{$max767} {
     flex-direction: column-reverse;

@@ -13,8 +13,8 @@ const Favorites = () => (
         <section className="bg-white py-5">
             <Container>
                 <ProductsListHeader title="Links you have saved"/>
-                <Products />
             </Container>
+            <Products/>
         </section>
     </>
 )

@@ -49,12 +49,12 @@ const ProductDetail = ({discount, attachment, title, features, isLimited, price,
                 </div>
                 <p className="product-detail-desc">{desc}</p>
                 <h3 className="list-item-title pt-5 pb-3">How to use this deal</h3>
-                <>
+                <div className="stepper-wrapper">
                     <div className="stepper">
                         <div className="d-flex align-items-center">
                             <p className="stepper-number d-flex justify-content-center align-items-center mb-0">01
                             </p>
-                            <p className="mb-0 ml-3 stepper-text">zdsxfgcjfcj</p>
+                            <p className="mb-0 ml-3 stepper-text">Navigate to the following website (example .com)</p>
                         </div>
                         <div className="stepper-line"/>
                     </div>
@@ -62,7 +62,7 @@ const ProductDetail = ({discount, attachment, title, features, isLimited, price,
                         <div className="d-flex align-items-center">
                             <p className="stepper-number d-flex justify-content-center align-items-center mb-0">02
                             </p>
-                            <p className="mb-0 ml-3 stepper-text">zdsxfgcjfcj</p>
+                            <p className="mb-0 ml-3 stepper-text">Choose your desired PLAN</p>
                         </div>
                         <div className="stepper-line"/>
                     </div>
@@ -70,10 +70,10 @@ const ProductDetail = ({discount, attachment, title, features, isLimited, price,
                         <div className="d-flex align-items-center">
                             <p className="stepper-number d-flex justify-content-center align-items-center mb-0">03
                             </p>
-                            <p className="mb-0 ml-3 stepper-text">zdsxfgcjfcj</p>
+                            <p className="mb-0 ml-3 stepper-text">Apply code (#AS303) during checkout</p>
                         </div>
                     </div>
-                </>
+                </div>
 
                 <div className="notification p-4 my-4 d-flex align-items-center">
                     <div className="d-flex align-items-start">

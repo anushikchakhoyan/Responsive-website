@@ -44,7 +44,15 @@ footer {
 
     & > li {
       list-style-type: none;
-      @include text-styles($text-base, $white, 300);
+
+      a {
+        @include text-styles($text-base, $white, 300);
+
+        &:hover {
+          text-decoration: none;
+          @include text-styles($text-base, var(--app-yellow), 300);
+        }
+      }
     }
   }
 
@@ -55,7 +63,7 @@ footer {
 
     & > p {
       @media #{$max767} {
-       padding: 20px 0;
+        padding: 20px 0;
       }
     }
 
