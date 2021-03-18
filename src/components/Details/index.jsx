@@ -4,9 +4,10 @@ import {Link} from "react-router-dom";
 import {Col, Container, Image, Row} from "react-bootstrap";
 import {BsArrowRight, FiCheckCircle, FiUsers} from "react-icons/all";
 
+import Stepper from "../Stepper";
 import "./index.scss";
 
-const ProductDetail = ({discount, attachment, title, features, isLimited, price, newPrice, desc, }) => (
+const ProductDetail = ({discount, attachment, title, features, stepper, isLimited, price, newPrice, desc}) => (
     <Container className="product-detail">
         <Row>
             <Col xs={12} sm={12} md={6}>
@@ -49,32 +50,11 @@ const ProductDetail = ({discount, attachment, title, features, isLimited, price,
                 </div>
                 <p className="product-detail-desc">{desc}</p>
                 <h3 className="list-item-title pt-5 pb-3">How to use this deal</h3>
-                <div className="stepper-wrapper">
-                    <div className="stepper">
-                        <div className="d-flex align-items-center">
-                            <p className="stepper-number d-flex justify-content-center align-items-center mb-0">01
-                            </p>
-                            <p className="mb-0 ml-3 stepper-text">Navigate to the following website (example .com)</p>
-                        </div>
-                        <div className="stepper-line"/>
-                    </div>
-                    <div className="stepper">
-                        <div className="d-flex align-items-center">
-                            <p className="stepper-number d-flex justify-content-center align-items-center mb-0">02
-                            </p>
-                            <p className="mb-0 ml-3 stepper-text">Choose your desired PLAN</p>
-                        </div>
-                        <div className="stepper-line"/>
-                    </div>
-                    <div className="stepper">
-                        <div className="d-flex align-items-center">
-                            <p className="stepper-number d-flex justify-content-center align-items-center mb-0">03
-                            </p>
-                            <p className="mb-0 ml-3 stepper-text">Apply code (#AS303) during checkout</p>
-                        </div>
-                    </div>
+                <div className="product-steps">
+                    {map(stepper, (item, index) => (
+                        <Stepper {...item} key={index}/>
+                    ))}
                 </div>
-
                 <div className="notification p-4 my-4 d-flex align-items-center">
                     <div className="d-flex align-items-start">
                         <FiUsers className="users-icon"/>
