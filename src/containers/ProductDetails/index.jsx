@@ -29,6 +29,20 @@ const ProductDetailsContainer = () => {
                     title: "Our links",
                     desc: "are 100% verified and fresh, published by our content managers. "
                 }
+            ],
+            stepper: [
+                {
+                    step: 1,
+                    content: `Navigate to the following website <b>(example .com)</b>`
+                },
+                {
+                    step: 2,
+                    content: `Choose your desired <b>PLAN</b>`
+                },
+                {
+                    step: 3,
+                    content: `Apply code <b>(#AS303)</b> during checkout`
+                }
             ]
         }
     )
